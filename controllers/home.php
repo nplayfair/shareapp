@@ -1,6 +1,7 @@
 <?php
 class Home extends Controller {
     protected function index() {
-        echo 'HOME/INDEX';
+        $viewmodel = new HomeModel();
+        $this->returnView($viewmodel->index(), true);
     }
 }
