@@ -23,6 +23,7 @@ class Bootstrap {
             // Action
             $this->action = $this->request['action'];
         }
+    }
 
         // Create controller
         public function createController() {
@@ -50,5 +51,4 @@ class Bootstrap {
                 return;
             }
         }
-    }
 }
