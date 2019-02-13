@@ -9,7 +9,7 @@ abstract class Controller {
     }
 
     public function executeAction() {
-        return $this->{this->action}();
+        return $this->{$this->action}();
     }
 
     protected function returnView($viewmodel, $fullview) {
