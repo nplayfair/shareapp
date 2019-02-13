@@ -8,4 +8,4 @@ define("DB_NAME", "shareboard");
 
 // Define URL
 define("ROOT_PATH", "/");
-define("ROOT_URL", "http://localhost/oop/project");
+define("ROOT_URL", "http://localhost/oop/project/");
