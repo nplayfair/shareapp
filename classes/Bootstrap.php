@@ -7,7 +7,7 @@ class Bootstrap {
     public function __construct($request) {
         // Handle request
         $this->request = $request;
-        if ($this->request['controller' == '']) {
+        if ($this->request['controller'] == '') {
             // Load home page
             $this->controller = 'home';
         } else {
@@ -23,5 +23,6 @@ class Bootstrap {
             // Action
             $this->action = $this->request['action'];
         }
+        
     }
 }
