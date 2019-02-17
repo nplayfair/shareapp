@@ -25,7 +25,7 @@ class ShareModel extends Model {
             // Verify
             if ($this->lastInsertId()) {
                 // Redirect
-                header('Locations: '.ROOT_URL.'shares');
+                header('Location: '.ROOT_URL.'shares');
             }
         }
         return;
