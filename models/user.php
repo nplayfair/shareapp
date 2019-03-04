@@ -8,6 +8,11 @@ class UserModel extends Model {
         
         // Check for submission
         if ($post['submit']) {
+            // Validation
+            if ($post['name'] == '' || $post['email'] == '' || $post['password'] == '') {
+                Messages::setMsg('Please fill in all fields.', 'error');
+                return;
+            }
             // Insert into DB
             $this->query('INSERT INTO users (name, email, password) VALUES 
                         (:name, :email, :password)');
@@ -57,7 +62,7 @@ class UserModel extends Model {
                 header('Location: '.ROOT_URL.'shares');
             } else {
                 // Incorrect
-                echo 'Incorrect login';
+                Messages::setMsg('Incorrect login', 'error');
             }
         }
         return;
