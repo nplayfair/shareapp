@@ -12,6 +12,11 @@ class ShareModel extends Model {
 
         // Check for submission
         if ($post['submit']) {
+            // Validation
+            if ($post['title'] == '' || $post['body'] == '' || $post['link'] == '') {
+                Messages::setMsg('Please fill in all fields.', 'error');
+                return;
+            }
             // Insert into DB
             $this->query('INSERT INTO shares (title, body, link, user_id) VALUES 
                         (:title, :body, :link, :user_id)');
