@@ -1,5 +1,7 @@
 <div class="container">
+    <?php if (isset($_SESSION['is_logged_in'])) : ?>
     <a href="<?php echo ROOT_URL; ?>shares/add" class="btn btn-success btn-share">Share Something</a>
+    <?php endif; ?>
     <?php foreach($viewmodel as $item) : ?>
         <div class="card my-2 text-left">
             <div class="card-body">
