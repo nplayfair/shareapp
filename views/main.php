@@ -49,6 +49,7 @@
 
     <div class="row py-3">
         <div class="col-md-12 text-center">
+            <?php Messages::display(); ?>
             <?php require($view); ?>
         </div>
     </div>
